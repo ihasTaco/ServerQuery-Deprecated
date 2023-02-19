@@ -4,6 +4,7 @@ ServerQuery is a Discord.py bot designed to query game servers that use A2S (Val
 Quick Links:<br>
 [Requirement](https://github.com/ihasTaco/ServerQuery#requirements)<br>
 [Setup](https://github.com/ihasTaco/ServerQuery#setup)<br>
+[Comming Soon](https://github.com/ihasTaco/ServerQuery#setup)<br>
 [Supported Games](https://github.com/ihasTaco/ServerQuery#supported-games)<br>
 [License](https://github.com/ihasTaco/ServerQuery#license)<br>
 
