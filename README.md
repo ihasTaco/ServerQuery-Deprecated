@@ -183,4 +183,4 @@ If you find a game that isn't on the list, please let me know!
 | Zombie Panic: Source                  | [17500](https://steamdb.info/app/17500/)      | A2S         | :x:                | :white_check_mark: | :white_check_mark:
 
 # License
-ServerQuery is released under the MIT License. 
+ServerQuery is released under the MPL 2.0 license
