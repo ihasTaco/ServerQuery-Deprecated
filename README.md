@@ -81,7 +81,7 @@ Once installed, you can check if pip is installed with the following command:<br
 Next, clone the repository:<br>
 ```git clone https://github.com/ihasTaco/ServerQuery/```
 
-
+Don't Forget to set the Graph Image Dump Guild/Channel ID's and Status Change Notification Guild/Channel ID's as well as add your bot token!
 After that, you can run the bot by executing the following command:<br>
 Note: there is no need to install the requirements as they will be installed on first run of the script below!
 ```python module_checker.py```
