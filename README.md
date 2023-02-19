@@ -94,6 +94,7 @@ Unfortunately, as I am getting bored of this project, it may be a few months bef
 * Dashboard - I want to make a django dashboard that will allow you to go to your localhost address (127.0.0.1:8000) and be able to customize and manage servers from there
 
 And here is some query api's that I will want to add eventually
+* RageMP
 * Terrarria
 * Roblox
 * Teamspeak
