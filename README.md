@@ -66,7 +66,7 @@ ServerQuery requires the following Python libraries to function correctly:
 * fivempy<br>
 * samp_client<br>
 * discord<br>
-* fuzzywuzzy<br>
+* fuzzywuzzy - For the check_api search function<br>
 * matplotlib<br>
 
 The scriipt will install any missing and necessary libraries automatically.
