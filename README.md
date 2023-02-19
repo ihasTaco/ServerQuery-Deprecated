@@ -16,6 +16,8 @@ Quick Links:<br>
 * Server Specific Customization - again an issue that I saw with my [last bot] was that it lacked specific server customization, so this was an issue that I was looking to fix in this bot!
 * More Customization - now you can finally customize everything in the embed!
     - Change Color of the Embed
+    - Set Thumbnail URL
+    - Set Footer Text and URL
     - Title
       1. Use Config Name
       2. Use Server Name
