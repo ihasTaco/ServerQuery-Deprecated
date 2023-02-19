@@ -93,7 +93,13 @@ Unfortunately, as I am getting bored of this project, it may be a few months bef
 * MariaDB/MySQL Database support - at this time the script is running off of a JSON file for all server information and customization, but I will be adding db support soon
 * Dashboard - I want to make a django dashboard that will allow you to go to your localhost address (127.0.0.1:8000) and be able to customize and manage servers from there
 
-And here is some query api's that I will want to add eventually
+And here is some query api's and games support that I will want to add eventually
+* ASE
+* GameSpy 1, 2, & 3
+* Doom 3
+* Nadeo
+* Quake 2, & 3
+* Unreal 2
 * RageMP
 * Terrarria
 * Roblox
