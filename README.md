@@ -69,7 +69,7 @@ ServerQuery requires the following Python libraries to function correctly:
 * fuzzywuzzy - For the check_api search function<br>
 * matplotlib<br>
 
-The scriipt will install any missing and necessary libraries automatically.
+The script will install any missing and necessary libraries automatically.
 
 # Setup
 Before you can use ServerQuery, make sure you have Python and pip installed on your machine. You can download Python from the official website and install it on your computer. <br>
