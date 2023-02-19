@@ -93,6 +93,11 @@ Unfortunately, as I am getting bored of this project, it may be a few months bef
 * MariaDB/MySQL Database support - at this time the script is running off of a JSON file for all server information and customization, but I will be adding db support soon
 * Dashboard - I want to make a django dashboard that will allow you to go to your localhost address (127.0.0.1:8000) and be able to customize and manage servers from there
 
+And here is some query api's that I will want to add eventually
+* Terrarria
+* Roblox
+* Teamspeak
+
 # Supported Games
 Here is the list of games that *SHOULD* be supported. <br>
 I added a Tested section, if that has an :x:, there is a slim chance that it may not be able to be queried or server/player info may not work! (but it should work fine) <br>
