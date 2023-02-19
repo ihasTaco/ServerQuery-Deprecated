@@ -2,10 +2,10 @@
 ServerQuery is a Discord.py bot designed to query game servers that use A2S (Valve Query API), FiveM, Minecraft, and SAMP. This bot provides server and player information, making it an excellent tool for gamers who want to check on server status, rules, and players.
 
 Quick Links:<br>
-[Requirement](https://github.com/ihasTaco/ServerQuery/README.md#requirements)<br>
-[Setup](https://github.com/ihasTaco/ServerQuery/README.md#setup)<br>
-[Supported Games](https://github.com/ihasTaco/ServerQuery/README.md#supported-games)<br>
-[License](https://github.com/ihasTaco/ServerQuery/README.md#license)<br>
+[Requirement](https://github.com/ihasTaco/ServerQuery#requirements)<br>
+[Setup](https://github.com/ihasTaco/ServerQuery#setup)<br>
+[Supported Games](https://github.com/ihasTaco/ServerQuery#supported-games)<br>
+[License](https://github.com/ihasTaco/ServerQuery#license)<br>
 
 # What's New
 * Stability - this was an issue from my [last bot], and from the start, I aimed to make it as stable as possible
