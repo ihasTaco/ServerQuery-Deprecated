@@ -75,7 +75,7 @@ The scriipt will install any missing and necessary libraries automatically.
 Before you can use ServerQuery, make sure you have Python and pip installed on your machine. You can download Python from the official website and install it on your computer. <br>
 
 Once installed, you can check if pip is installed with the following command:<br>
-`python -m ensurepip`
+`python -m ensurepip --upgrade`
 
 
 Next, clone the repository:<br>
