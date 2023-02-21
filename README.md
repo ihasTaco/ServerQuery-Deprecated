@@ -95,8 +95,6 @@ Note: there is no need to install the requirements as they will be installed on 
 * Read Message History
 
 # Coming Soon
-Unfortunately, as I am getting bored of this project, it may be a few months before I get back into it and implement the rest of this
-
 * Ability to import/export server customization configs - for faster server customization
 * MariaDB/MySQL Database support - at this time the script is running off of a JSON file for all server information and customization, but I will be adding db support soon
 * Dashboard - I want to make a django dashboard that will allow you to go to your localhost address (127.0.0.1:8000) and be able to customize and manage servers from there
