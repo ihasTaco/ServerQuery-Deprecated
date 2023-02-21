@@ -506,4 +506,3 @@ async def on_ready():
             await wait(300)
             server_index = 0
 client.run(str(config.get('DEFAULT', 'discord_token')))
-#client.run("MTA3MTIzODM1NjUyNjE4NjU0Ng.GEPFYL.6bTXwKD9u9lIdS7q6buE-F4TfLcKAawnlxBj08")
