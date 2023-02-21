@@ -95,7 +95,8 @@ Note: there is no need to install the requirements as they will be installed on 
 * Read Message History
 
 # Coming Soon
-* Ability to import/export server customization configs - for faster server customization
+* Organizing and cleaning up code ***(Currently In Progress)***
+* Ability to import/export server customization configs - for faster server customization ***(Currently In Progress)***
 * MariaDB/MySQL Database support - at this time the script is running off of a JSON file for all server information and customization, but I will be adding db support soon
 * Dashboard - I want to make a django dashboard that will allow you to go to your localhost address (127.0.0.1:8000) and be able to customize and manage servers from there
 
@@ -137,8 +138,8 @@ If you find a game that isn't on the list, please let me know!
 | Brink                                 | [22350](https://steamdb.info/app/22350/)      | A2S         | :x:                | :white_check_mark: | :white_check_mark:
 | Call of Duty: Modern Warfare 3        | [115300](https://steamdb.info/app/115300/)    | A2S         | :x:                | :white_check_mark: | :white_check_mark:
 | Conan Exiles                          | [440900](https://steamdb.info/app/440900/)    | A2S         | :x:                | :white_check_mark: | :white_check_mark:
-| Counter-Strike 1.5                    | --                                            | A2S         | :white_check_mark: | :white_check_mark: | :white_check_mark:
-| Counter Strike 1.6                    | --                                            | A2S         | :white_check_mark: | :white_check_mark: | :white_check_mark:
+| Counter-Strike 1.5                    | [--](# "I don't know what game this uses, so if someone knows more about cs 1.5, please edit this and submit a pull request")                                            | A2S         | :white_check_mark: | :white_check_mark: | :white_check_mark:
+| Counter Strike 1.6                    | [--](# "I don't know what game this uses, so if someone knows more about cs 1.6, please edit this and submit a pull request")                                            | A2S         | :white_check_mark: | :white_check_mark: | :white_check_mark:
 | Counter-Strike 2D                     | [666220](https://steamdb.info/app/666220/)    | A2S         | :x:                | :white_check_mark: | :white_check_mark:
 | Counter-Strike: Condition Zero        | [80](https://steamdb.info/app/80/)            | A2S         | :x:                | :white_check_mark: | :white_check_mark:
 | Counter-Strike: Global Offensive      | [730](https://steamdb.info/app/730/)          | A2S         | :white_check_mark: | :white_check_mark: | :white_check_mark:
