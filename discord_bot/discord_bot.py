@@ -394,41 +394,59 @@ async def check_server_status(server_id, status, file_path):
         with open(file_path, "w") as file:
             json.dump(data, file, indent=4)
 
+        # Get the embed configuration
+        embed_config = data[server_id].get("Embed", {})
+
+        # Get the thumbnail configuration
+        thumbnail_config = embed_config.get("Thumbnail", {})
+
+        if thumbnail_config.get("Display", False):
+            thumbnail_icon_url = thumbnail_config.get("URL", '')
+        else:
+            thumbnail_icon_url = ''
+
+        # Get the footer configuration
+        footer_config = embed_config.get("Footer", {})
+
+        if footer_config.get("Display", False):
+            footer_text = footer_config.get("Text", "")
+        else:
+            footer_config = embed_config.get("Footer", {})
+            footer_text = footer_config.get("Text", "")
+            footer_icon_url = footer_config.get("Icon URL", '')
+
         server_name = ''
         if data[server_id]["Server Name"] == '':
             server_name = server_id
         else:
             server_name = data[server_id]["Server Name"]
 
-        # Send the appropriate message
         if status == True:
             # Create an embed to notify that the server is online
             embed = discord.Embed(title=f"Server {server_name} is now online", color=0x00FF00, timestamp=timestamp)
-            embed.set_thumbnail(url="https://i.imgur.com/nLfXuV7.png")
             embed.add_field(name="Server Status", value=":green_circle: Online", inline=True)
-            embed.set_footer(text="ServerQuery by Royal Productions", icon_url="https://cdn.discordapp.com/icons/360541835371741185/201c015115ff6e8352486a8ad6c39a1a.webp")
-            
-            # Get the guild and channel where the notification should be sent
-            guild = client.get_guild(int(config.get('DEFAULT', 'status_guild_id')))
-            if guild is not None:
-                channel = guild.get_channel(int(config.get('DEFAULT', 'status_channel_id')))
-                # Send the embed in the channel
-                await channel.send(embed=embed)
-                logging.info(f"Server {server_id} is now online.")
-        else:
+        elif status == False:
             # Create an embed to notify that the server is offline
             embed = discord.Embed(title=f"Server {server_id} is now offline", color=0xFF0000, timestamp=timestamp)
-            embed.set_thumbnail(url="https://i.imgur.com/nLfXuV7.png")
             embed.add_field(name="Server Status", value=":red_circle: Offline", inline=True)
-            embed.set_footer(text="ServerQuery by Royal Productions", icon_url="https://cdn.discordapp.com/icons/360541835371741185/201c015115ff6e8352486a8ad6c39a1a.webp")
+            
+        embed.set_thumbnail(url=thumbnail_icon_url)
+        embed.set_footer(text=footer_text, icon_url=footer_icon_url)
+        
+        # Get the guild and channel where the notification should be sent
+        guild = client.get_guild(int(config.get('DEFAULT', 'status_guild_id')))
+        if guild is not None:
+            channel = guild.get_channel(int(config.get('DEFAULT', 'status_channel_id')))
+            if channel is not None: 
+                try:
+                    await channel.send(embed=embed)
+                except Exception as e:
+                    logging.error(f"Error issued when trying to send status change message: {e}")
 
-            # Get the guild and channel where the notification should be sent
-            guild = client.get_guild(int(config.get('DEFAULT', 'status_guild_id')))
-            if guild is not None:
-                channel = guild.get_channel(int(config.get('DEFAULT', 'status_guild_id')))
-                # Send the embed in the channel
-                await channel.send(embed=embed)
-                logging.info(f"Server {server_id} is now offline.")
+                if status == True:
+                    logging.info(f"Server {server_name} is now online.")
+                elif status == False:
+                    logging.info(f"Server {server_name} is now offline.")
 
 async def wait(seconds):
     await asyncio.sleep(seconds)
