@@ -88,6 +88,12 @@ After that, you can run the bot by executing the following command:<br>
 Note: there is no need to install the requirements as they will be installed on first run of the script below!
 ```python module_checker.py```
 
+**Don't Forget** the bot requires these permissions in the server channels to work correctly:
+* View Channel
+* Send Messages
+* Embed Links
+* Read Message History
+
 # Coming Soon
 Unfortunately, as I am getting bored of this project, it may be a few months before I get back into it and implement the rest of this
 
