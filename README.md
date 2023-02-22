@@ -4,6 +4,7 @@ ServerQuery is a Discord.py bot designed to query game servers that use A2S (Val
 Quick Links:<br>
 [Requirement](https://github.com/ihasTaco/ServerQuery#requirements)<br>
 [Setup](https://github.com/ihasTaco/ServerQuery#setup)<br>
+[Known Bugs](https://github.com/ihasTaco/ServerQuery#known-bugs)<br>
 [Coming Soon](https://github.com/ihasTaco/ServerQuery#coming-soon)<br>
 [Supported Games](https://github.com/ihasTaco/ServerQuery#supported-games)<br>
 [License](https://github.com/ihasTaco/ServerQuery#license)<br>
@@ -93,6 +94,9 @@ Note: there is no need to install the requirements as they will be installed on 
 * Send Messages
 * Embed Links
 * Read Message History
+
+# Known Bugs
+* If a FiveM server is being queried and the server is offline, the bot will crash. this is because the fivempy module doesn't handle exceptions quite like a2s & mcstatus does, so I will have to add error catching to prevent crashes
 
 # Coming Soon
 * Organizing and cleaning up code ***(Currently In Progress)***
