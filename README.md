@@ -1,9 +1,11 @@
+<img src="https://royalproductions.xyz/images/serverquery/ServerQueryV4.5.png"></img>
 # ServerQuery
 ServerQuery is a Discord.py bot designed to query game servers that use A2S (Valve Query API), FiveM, Minecraft, and SAMP. This bot provides server and player information, making it an excellent tool for discord server owners who hosts dedicated servers who wants to display server and player information in a fully customizable but beautifully designed way!
 
 Quick Links:<br>
 [Requirement](https://github.com/ihasTaco/ServerQuery#requirements)<br>
 [Setup](https://github.com/ihasTaco/ServerQuery#setup)<br>
+[Known Bugs](https://github.com/ihasTaco/ServerQuery#known-bugs)<br>
 [Coming Soon](https://github.com/ihasTaco/ServerQuery#coming-soon)<br>
 [Supported Games](https://github.com/ihasTaco/ServerQuery#supported-games)<br>
 [License](https://github.com/ihasTaco/ServerQuery#license)<br>
@@ -94,11 +96,15 @@ Note: there is no need to install the requirements as they will be installed on 
 * Embed Links
 * Read Message History
 
+# Known Bugs
+* If a FiveM server is being queried and the server is offline, the bot will crash. this is because the fivempy module doesn't handle exceptions quite like a2s & mcstatus does, so I will have to add error catching to prevent crashes
+
 # Coming Soon
 * Organizing and cleaning up code ***(Currently In Progress)***
 * Ability to import/export server customization configs - for faster server customization ***(Currently In Progress)***
 * MariaDB/MySQL Database support - at this time the script is running off of a JSON file for all server information and customization, but I will be adding db support soon
 * Dashboard - I want to make a django dashboard that will allow you to go to your localhost address (127.0.0.1:8000) and be able to customize and manage servers from there
+* Add settings for notifications for each server, including ability to Enable/Disable, set guild/channel id, and set title 
 
 And here is some query api's and games support that I will want to add eventually
 * ASE
