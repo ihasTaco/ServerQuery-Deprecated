@@ -97,7 +97,7 @@ Note: there is no need to install the requirements as they will be installed on 
 * Read Message History
 
 # Known Bugs
-* If a FiveM server is being queried and the server is offline, the bot will crash. this is because the fivempy module doesn't handle exceptions quite like a2s & mcstatus does, so I will have to add error catching to prevent crashes
+* Currently there aren't any known bugs in ServerQuery, if you find one please submit an issue!
 
 # Coming Soon
 * Organizing and cleaning up code ***(Currently In Progress)***
