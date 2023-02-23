@@ -6,6 +6,7 @@ try:
     import json
     import logging
     import shutil
+    from modules import json_parser
 
     # Function to check if a given module is installed and import it if it is
     def check_module(module_name):
@@ -107,7 +108,7 @@ try:
              
     # Function to check if a JSON file exists and load its contents
     def check_json_file(retries=0):
-        file_path = "data_management\server_info.json"
+        file_path = "server_data\server_info.json"
         logging.info("Checking JSON file")
         # The script will only try to read the file 3 times, in case of file being missing or permission issues.
         while retries < 3:
@@ -178,7 +179,7 @@ try:
             sys.exit("pip is required to run this script. Aborting.")
 
     # List of required modules
-    modules_to_check = ['python-a2s', 'mcstatus', 'requests', 'fivempy', 'samp_client', 'discord', 'fuzzywuzzy', 'matplotlib', 'configparser']
+    modules_to_check = ['python-a2s', 'mcstatus', 'requests', 'fivempy', 'samp_client', 'discord', 'fuzzywuzzy', 'python-Levenshtein', 'matplotlib', 'configparser']
 
     # Loop through each module and check if it is installed
     while True:
@@ -213,8 +214,16 @@ try:
         if all_installed:
             # If all modules are installed, check the JSON file and run the data management and Discord bot scripts
             check_json_file()
-            subprocess.call(["python", "data_management\\data_manager.py"])
-            subprocess.call(["python", "discord_bot\\discord_bot.py"])
+            subprocess.call(["python", "server_data\\data_manager.py"])
+            server_info = json_parser.read_json_file("server_data\server_info.json")
+            while True:
+                if server_info != {}:
+                    subprocess.call(["python", "discord_bot\\bot.py"])
+                    break
+                else:
+                    print("Can't start bot without adding server info!\nPlease add some now!")
+                    subprocess.call(["python", "server_data\\data_manager.py"])
+                
             break
 
 except KeyboardInterrupt:

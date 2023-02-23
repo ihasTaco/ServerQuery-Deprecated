@@ -1,10 +1,10 @@
 import matplotlib.pyplot as plt
-import datetime
 from matplotlib.ticker import MaxNLocator
-import json
-import json_parser
+import datetime
 import numpy as np
 import logging
+
+from modules import json_parser
     
 def calculate_hourly_averages(player_data):
     # This function calculates hourly averages for player data
@@ -47,11 +47,17 @@ def set_plot_style(graph_config):
     plt.title(graph_config['Title']['Text'], color=graph_config['Title']['Color'])
 
 def plot_player_data(server_UUID):
-    data = json_parser.load_json_file("data_management\server_info.json")
+    data = json_parser.read_json_file("server_data\server_info.json")
 
     # Get player count data for the server
     players = data[server_UUID]['Player Count']
-    graph_config = data[server_UUID]['Graph']
+
+    graph_config = data[server_UUID].get("Graph", {})
+    if not graph_config:
+        # Use default layout
+        graph_config = {"Title": {"Text": "","Color": "#ffffff"},"Labels": {"X Label Text": "Time (UTC)","Y Label Text": "","Color": "#999999"},"Tick Color": "#999999","Online Players": {"Label": "Current Players","Line Color": "#f99245","Fill Color": "#f99245","Fill Opacity": 0.125},"Trend": {"Display": True,"Label": "Player Trends","Line Color": "#ff0000"},"Grid": {"Display": True,"Color": "#f99245","Opacity": 0.125},"Legend": {"Display": True,"Color": "#ffffff","Edge Color": "#ffffff","Opacity": 0.75}}
+    else:
+        graph_config = data[server_UUID]['Graph']
 
     # Set up time range for x-axis
     current_time = datetime.datetime.now()
