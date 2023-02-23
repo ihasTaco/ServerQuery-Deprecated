@@ -100,10 +100,9 @@ Note: there is no need to install the requirements as they will be installed on 
 * Currently there aren't any known bugs in ServerQuery, if you find one please submit an issue!
 
 # Coming Soon
-* Organizing and cleaning up code ***(Currently In Progress)***
-* Ability to import/export server customization configs - for faster server customization ***(Currently In Progress)***
+* Ability to import/export server customization configs - for faster server customization
 * MariaDB/MySQL Database support - at this time the script is running off of a JSON file for all server information and customization, but I will be adding db support soon
-* Dashboard - I want to make a django dashboard that will allow you to go to your localhost address (127.0.0.1:8000) and be able to customize and manage servers from there
+* Dashboard - I want to make a django dashboard that will allow you to go to your localhost address (127.0.0.1:8000) and be able to customize and manage servers from there *****(Currently In Progress)*****
 * Add settings for notifications for each server, including ability to Enable/Disable, set guild/channel id, and set title 
 
 And here is some query api's and games support that I will want to add eventually
