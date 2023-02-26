@@ -209,8 +209,8 @@ class protocol:
                 print("Error: Incorrect Query Type!\nSet Query Type to:\nserver_info")
                 return None
 
-        except TimeoutError or TypeError:
-            print("The server took too long to respond.\nThis may be because the server isn't online, or the query was denied!")
+        except (TimeoutError, TypeError):
+            print(f"The server took too long to respond.\nThis may be because the server isn't online, or the query was denied!")
             return False
 
     def samp(ip, port, query_type):
