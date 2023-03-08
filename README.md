@@ -97,8 +97,8 @@ Note: there is no need to install the requirements as they will be installed on 
 * Read Message History
 
 # Known Bugs
+* found an issue when trying to run this bot in a virtual environment, it wont install the modules properly.
 * Currently there aren't any known bugs in ServerQuery, if you find one please submit an issue!
-
 # Coming Soon
 * Ability to import/export server customization configs - for faster server customization
 * MariaDB/MySQL Database support - at this time the script is running off of a JSON file for all server information and customization, but I will be adding db support soon
