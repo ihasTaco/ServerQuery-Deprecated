@@ -3,6 +3,7 @@ from discord.ext import commands
 from discord import app_commands
 import sys
 import subprocess
+import time
 import json
 import datetime
 import asyncio
@@ -25,6 +26,10 @@ logging.basicConfig(filename='logs\\console.log', level=logging.DEBUG, format='%
 
 config = configparser.ConfigParser()
 config.read('config.ini')
+
+def restart():
+    subprocess.Popen(["python", "module_checker.py"])
+    exit()
 
 async def update_embed(client, embed, image_file):
     logger = logging.getLogger(__name__)
@@ -453,6 +458,8 @@ async def wait(seconds):
 
 @client.event
 async def on_ready():
+    start_time = time.time()
+
     logging.info("ServerQuery is starting up")
 
     # Path to the server_info.json file
@@ -474,11 +481,7 @@ async def on_ready():
     print("                             ServerQuery is ready!                              ")
     print("_______________________________ By: ihasTacoFML ________________________________\n")
 
-    # Copy the global tree to the specified guild
-    #client.tree.copy_global_to(guild=discord.Object(id=1071243907121295420))
-    #client.tree.copy_global_to()
-    # Synchronize the command tree for the specified guild
-    #await client.tree.sync(guild=discord.Object(id=1071243907121295420))
+    # Synchronize the command tree
     await client.tree.sync()
     # Initialize the server index to 0
     server_index = 0
@@ -519,8 +522,14 @@ async def on_ready():
 
             # Increment the server index and continue the loop
             server_index += 1
+
         except IndexError:
             # If all servers have been checked, wait for 5 minutes before starting again and reset the server index to 0
             await wait(300)
             server_index = 0
+            
+            elapsed_time = time.time() - start_time
+            if elapsed_time >= 24 * 60 * 60:  # 24 hours
+                restart()
+
 client.run(str(config.get('DEFAULT', 'discord_token')))
